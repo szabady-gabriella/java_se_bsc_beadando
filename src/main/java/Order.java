@@ -1,14 +1,12 @@
-import java.util.Map;
-
 public class Order {
     Store raktar;
     //Customer vevo;
-    ShoppingCart rendeles;
+    ShoppingChart rendeles;
     OrderOthers rendeleshezEgyebek;
     OrderStatus rendelesStatus;
     String megjegyzes;
 
-    public Order(Store raktar, ShoppingCart rendeles, OrderOthers rendeleshezEgyebek, OrderStatus rendelesStatus) {
+    public Order(Store raktar, ShoppingChart rendeles, OrderOthers rendeleshezEgyebek, OrderStatus rendelesStatus) {
         this.raktar = raktar;
         this.rendeles = rendeles;
         this.rendeleshezEgyebek = rendeleshezEgyebek;

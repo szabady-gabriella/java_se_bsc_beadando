@@ -29,8 +29,6 @@ public class OrderOthers {
 
     public void ellenorzes(ShoppingPlace vasarlasHelye, DeliveryMethod szallitasMod) {
 
-        System.out.println( "vasarlasHelye=" + vasarlasHelye + " szallitasMod=" + szallitasMod);
-
         if (vasarlasHelye == ShoppingPlace.SHOP && szallitasMod != DeliveryMethod.PERSONAL) {
             throw new IllegalArgumentException("Üzletben történő vásárlás esetén nem lehet kiszállítást választani.");
         }

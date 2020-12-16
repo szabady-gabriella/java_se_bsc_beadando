@@ -8,6 +8,9 @@ public class Store extends ProductList {
     }
 
     public void mennyisegNovel(Product termek, Integer mennyiseg) {
+        if (termek == null) {
+            throw new IllegalArgumentException("Érvénytelen bejövő paraméter (termék).");
+        }
         if (mennyiseg < 1) {
             throw new IllegalArgumentException("Érvénytelen bejövő paraméter (mennyiség).");
         }
@@ -20,11 +23,20 @@ public class Store extends ProductList {
     }
 
     public void mennyisegCsokkent(Product termek, int mennyiseg) {
+        if (termek == null) {
+            throw new IllegalArgumentException("Érvénytelen bejövő paraméter (termék).");
+        }
         if (mennyiseg < 1) {
             throw new IllegalArgumentException("Érvénytelen bejövő paraméter (mennyiség).");
         }
-
-        super.termekLista.put(termek, super.termekLista.get(termek) + mennyiseg);
+        if (!super.termekLista.containsKey(termek)) {
+            throw new IllegalArgumentException("Ez a termék nincs a raktárban, mennyisége nem csökkenthető.");
+        }
+        if (super.termekLista.get(termek) < mennyiseg) {
+            super.termekLista.put(termek, 0);
+        } else {
+            super.termekLista.put(termek, super.termekLista.get(termek) - mennyiseg);
+        }
     }
 
 }

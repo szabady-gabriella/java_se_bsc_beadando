@@ -1,10 +1,10 @@
 import java.util.Map;
 
-public class ShoppingCart extends ProductList {
+public class ShoppingChart extends ProductList {
 
     ShoppingChartState allapot;
 
-    public ShoppingCart() {
+    public ShoppingChart() {
         super();
         allapot = ShoppingChartState.IN_PROGRESS;
     }

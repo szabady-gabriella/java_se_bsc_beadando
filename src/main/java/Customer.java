@@ -14,7 +14,7 @@ public class Customer {
         this.email = email;
     }
 
-    public Order vasarlas(Store raktar, ShoppingCart kosar, OrderOthers egyebInfok) {
+    public Order vasarlas(Store raktar, ShoppingChart kosar, OrderOthers egyebInfok) {
         if (raktar == null) {
             throw new IllegalArgumentException("Érvénytelen bejövő paraméter (raktár).");
         }
